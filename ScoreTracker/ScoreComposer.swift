@@ -1,8 +1,10 @@
-//
-//  ScoreComposer.swift
-//  ScoreTracker
-//
-//  Created by Lucas Kuipers on 02/01/22.
-//
+import UIKit
 
-import Foundation
+struct ScoreComposer {
+
+    static func makeScene() -> UIViewController {
+        let view = ScoreView()
+        let viewController = BaseViewController(from: view)
+        return viewController
+    }
+}

@@ -1,8 +1,14 @@
-//
-//  ScoreView.swift
-//  ScoreTracker
-//
-//  Created by Lucas Kuipers on 02/01/22.
-//
+import UIKit
 
-import Foundation
+final class ScoreView: UIView {
+
+    init() {
+        super.init(frame: .zero)
+        backgroundColor = .systemPink
+        accessibilityLabel = "Score View"
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+}

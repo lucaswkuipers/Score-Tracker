@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		EC06391B27822C230073B0F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06391A27822C230073B0F0 /* AppDelegate.swift */; };
 		EC06391D27822C230073B0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06391C27822C230073B0F0 /* SceneDelegate.swift */; };
-		EC06391F27822C230073B0F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06391E27822C230073B0F0 /* ViewController.swift */; };
-		EC06392227822C230073B0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC06392027822C230073B0F0 /* Main.storyboard */; };
+		EC06391F27822C230073B0F0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06391E27822C230073B0F0 /* BaseViewController.swift */; };
 		EC06392727822C250073B0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC06392627822C250073B0F0 /* Assets.xcassets */; };
 		EC06392A27822C250073B0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC06392827822C250073B0F0 /* LaunchScreen.storyboard */; };
+		EC06394E278230320073B0F0 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06394D278230320073B0F0 /* ScoreView.swift */; };
+		EC063950278231A20073B0F0 /* ScoreComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06394F278231A20073B0F0 /* ScoreComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +37,14 @@
 		EC06391727822C230073B0F0 /* ScoreTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC06391A27822C230073B0F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC06391C27822C230073B0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC06391E27822C230073B0F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC06392127822C230073B0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC06391E27822C230073B0F0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		EC06392627822C250073B0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC06392927822C250073B0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC06392B27822C250073B0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC06393027822C250073B0F0 /* ScoreTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC06393A27822C250073B0F0 /* ScoreTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC06394D278230320073B0F0 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		EC06394F278231A20073B0F0 /* ScoreComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +95,12 @@
 			children = (
 				EC06391A27822C230073B0F0 /* AppDelegate.swift */,
 				EC06391C27822C230073B0F0 /* SceneDelegate.swift */,
-				EC06391E27822C230073B0F0 /* ViewController.swift */,
-				EC06392027822C230073B0F0 /* Main.storyboard */,
+				EC06391E27822C230073B0F0 /* BaseViewController.swift */,
 				EC06392627822C250073B0F0 /* Assets.xcassets */,
 				EC06392827822C250073B0F0 /* LaunchScreen.storyboard */,
 				EC06392B27822C250073B0F0 /* Info.plist */,
+				EC06394D278230320073B0F0 /* ScoreView.swift */,
+				EC06394F278231A20073B0F0 /* ScoreComposer.swift */,
 			);
 			path = ScoreTracker;
 			sourceTree = "<group>";
@@ -208,7 +211,6 @@
 			files = (
 				EC06392A27822C250073B0F0 /* LaunchScreen.storyboard in Resources */,
 				EC06392727822C250073B0F0 /* Assets.xcassets in Resources */,
-				EC06392227822C230073B0F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,8 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC06391F27822C230073B0F0 /* ViewController.swift in Sources */,
+				EC06391F27822C230073B0F0 /* BaseViewController.swift in Sources */,
+				EC06394E278230320073B0F0 /* ScoreView.swift in Sources */,
 				EC06391B27822C230073B0F0 /* AppDelegate.swift in Sources */,
+				EC063950278231A20073B0F0 /* ScoreComposer.swift in Sources */,
 				EC06391D27822C230073B0F0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,14 +273,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EC06392027822C230073B0F0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC06392127822C230073B0F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC06392827822C250073B0F0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,7 +412,7 @@
 				INFOPLIST_FILE = ScoreTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,7 +440,7 @@
 				INFOPLIST_FILE = ScoreTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
