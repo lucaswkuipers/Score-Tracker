@@ -1,6 +1,17 @@
 import UIKit
 
+protocol BaseViewControllerDelegate {
+    func viewDidLoad()
+    func viewWillAppear()
+    func viewWillLayoutSubviews()
+    func viewDidLayoutSubviews()
+    func viewDidAppear()
+    func viewWillDisappear()
+    func viewDidDisappear()
+}
+
 final class BaseViewController: UIViewController {
+    var delegate: BaseViewControllerDelegate?
     var screen: UIView?
 
     override func loadView() {
@@ -18,50 +29,57 @@ final class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate?.viewDidLoad()
 
         guard let screenName = screen?.accessibilityLabel else { return }
-        print("Controller with: \(screenName) did load")
+        print("[\(screenName)] Did Load")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        delegate?.viewWillAppear()
 
         guard let screenName = screen?.accessibilityLabel else { return }
-        print("Controller with: \(screenName) will appear")
+        print("[\(screenName)] Will Appear")
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        delegate?.viewWillLayoutSubviews()
 
         guard let screenName = screen?.accessibilityLabel else { return }
-        print("Controller with: \(screenName) will will layout subviews")
+        print("[\(screenName)] Will Layout Subviews")
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        delegate?.viewDidLayoutSubviews()
 
         guard let screenName = screen?.accessibilityLabel else { return }
-        print("Controller with: \(screenName) will did layout subviews")
+        print("[\(screenName)] Did Layout Subviews")
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        delegate?.viewDidAppear()
 
         guard let screenName = screen?.accessibilityLabel else { return }
-        print("Controller with: \(screenName) did appear")
+        print("[\(screenName)] Did Appear")
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        delegate?.viewWillDisappear()
 
         guard let screenName = screen?.accessibilityLabel else { return }
-        print("Controller with: \(screenName) will disappear")
+        print("[\(screenName)] Will Disappear")
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        delegate?.viewDidDisappear()
 
         guard let screenName = screen?.accessibilityLabel else { return }
-        print("Controller with: \(screenName) did disappear")
+        print("[\(screenName)] Did Disappear")
     }
 }
