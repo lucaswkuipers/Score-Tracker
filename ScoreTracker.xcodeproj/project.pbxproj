@@ -11,12 +11,8 @@
 		EC06391D27822C230073B0F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06391C27822C230073B0F0 /* SceneDelegate.swift */; };
 		EC06391F27822C230073B0F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06391E27822C230073B0F0 /* ViewController.swift */; };
 		EC06392227822C230073B0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC06392027822C230073B0F0 /* Main.storyboard */; };
-		EC06392527822C230073B0F0 /* ScoreTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC06392327822C230073B0F0 /* ScoreTracker.xcdatamodeld */; };
 		EC06392727822C250073B0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC06392627822C250073B0F0 /* Assets.xcassets */; };
 		EC06392A27822C250073B0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC06392827822C250073B0F0 /* LaunchScreen.storyboard */; };
-		EC06393527822C250073B0F0 /* ScoreTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06393427822C250073B0F0 /* ScoreTrackerTests.swift */; };
-		EC06393F27822C250073B0F0 /* ScoreTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06393E27822C250073B0F0 /* ScoreTrackerUITests.swift */; };
-		EC06394127822C250073B0F0 /* ScoreTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06394027822C250073B0F0 /* ScoreTrackerUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,15 +38,11 @@
 		EC06391C27822C230073B0F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC06391E27822C230073B0F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC06392127822C230073B0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EC06392427822C230073B0F0 /* ScoreTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoreTracker.xcdatamodel; sourceTree = "<group>"; };
 		EC06392627822C250073B0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC06392927822C250073B0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC06392B27822C250073B0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC06393027822C250073B0F0 /* ScoreTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC06393427822C250073B0F0 /* ScoreTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTrackerTests.swift; sourceTree = "<group>"; };
 		EC06393A27822C250073B0F0 /* ScoreTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC06393E27822C250073B0F0 /* ScoreTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTrackerUITests.swift; sourceTree = "<group>"; };
-		EC06394027822C250073B0F0 /* ScoreTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				EC06391927822C230073B0F0 /* ScoreTracker */,
-				EC06393327822C250073B0F0 /* ScoreTrackerTests */,
-				EC06393D27822C250073B0F0 /* ScoreTrackerUITests */,
 				EC06391827822C230073B0F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,26 +98,8 @@
 				EC06392627822C250073B0F0 /* Assets.xcassets */,
 				EC06392827822C250073B0F0 /* LaunchScreen.storyboard */,
 				EC06392B27822C250073B0F0 /* Info.plist */,
-				EC06392327822C230073B0F0 /* ScoreTracker.xcdatamodeld */,
 			);
 			path = ScoreTracker;
-			sourceTree = "<group>";
-		};
-		EC06393327822C250073B0F0 /* ScoreTrackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				EC06393427822C250073B0F0 /* ScoreTrackerTests.swift */,
-			);
-			path = ScoreTrackerTests;
-			sourceTree = "<group>";
-		};
-		EC06393D27822C250073B0F0 /* ScoreTrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EC06393E27822C250073B0F0 /* ScoreTrackerUITests.swift */,
-				EC06394027822C250073B0F0 /* ScoreTrackerUITestsLaunchTests.swift */,
-			);
-			path = ScoreTrackerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC06391F27822C230073B0F0 /* ViewController.swift in Sources */,
-				EC06392527822C230073B0F0 /* ScoreTracker.xcdatamodeld in Sources */,
 				EC06391B27822C230073B0F0 /* AppDelegate.swift in Sources */,
 				EC06391D27822C230073B0F0 /* SceneDelegate.swift in Sources */,
 			);
@@ -272,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC06393527822C250073B0F0 /* ScoreTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC06394127822C250073B0F0 /* ScoreTrackerUITestsLaunchTests.swift in Sources */,
-				EC06393F27822C250073B0F0 /* ScoreTrackerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,19 +596,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EC06392327822C230073B0F0 /* ScoreTracker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EC06392427822C230073B0F0 /* ScoreTracker.xcdatamodel */,
-			);
-			currentVersion = EC06392427822C230073B0F0 /* ScoreTracker.xcdatamodel */;
-			path = ScoreTracker.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EC06390F27822C230073B0F0 /* Project object */;
 }
