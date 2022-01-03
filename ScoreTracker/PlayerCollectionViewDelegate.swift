@@ -1,9 +1,13 @@
 import UIKit
 
 final class PlayerTableViewDelegate: NSObject, UITableViewDelegate, UITableViewDataSource {
-    var players: [Player] = [Player(name: "Bruno", score: 4, color: .systemBlue),
-                             Player(name: "Lara", score: 7, color: .systemPink),
-                             Player(name: "Lucas", score: 3, color: .systemGreen)]
+    var players: [Player] = [Player(name: "Bruno", score: 4, position: "1st", color: .systemCyan),
+                             Player(name: "Lara", score: 7, position: "2nd", color: .systemTeal),
+                             Player(name: "Lara", score: 7, position: "3rd", color: .systemPink),
+                             Player(name: "Lara", score: 7, position: "4th", color: .systemPink),
+                             Player(name: "Lara", score: 7, position: "5th", color: .systemTeal),
+                             Player(name: "Lara", score: 7, position: "6th", color: .systemCyan),
+                             Player(name: "Lucas", score: 3, position: "7h", color: .systemGreen)]
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
@@ -17,6 +21,6 @@ final class PlayerTableViewDelegate: NSObject, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (tableView.frame.height - 10) / CGFloat(players.count)
+        return max((tableView.frame.height - 10) / CGFloat(players.count), 80)
     }
 }
