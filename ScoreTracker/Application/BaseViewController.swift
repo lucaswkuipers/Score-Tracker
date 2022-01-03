@@ -18,9 +18,10 @@ final class BaseViewController: UIViewController {
         self.view = screen
     }
 
-    init(from screen: UIView) {
+    init(from screen: UIView, title: String? = nil) {
         self.screen = screen
         super.init(nibName: nil, bundle: nil)
+        self.title = title
     }
 
     required init?(coder: NSCoder) {
